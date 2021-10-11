@@ -203,8 +203,7 @@ func getResponse(w http.ResponseWriter, r *http.Request, s *Server, static bool)
 func (s *Server) startServer() error {
 	srv := &http.Server{
 		Handler: s.router,
-		Addr:    ":" + strconv.Itoa(s.Port),
-		AddrType: net.TCP4,
+		Addr:    "0.0.0.0:" + strconv.Itoa(s.Port),
 	}
 	jlog.Logf("Starting server on port %d...\n", s.Port)
 	return srv.ListenAndServe()
