@@ -1,4 +1,4 @@
-module github.com/jchavannes/jgo
+module github.com/hmywda01/jgo
 
 go 1.16
 
